@@ -13,7 +13,7 @@
 .zoom-image {
   animation: zoom 1s infinite alternate; /* Cambia la duración y el tipo de animación según prefieras */
   margin-top: 50px;
-  padding-bottom: 100px;
+  padding-bottom: 40px;
 }
 
 @keyframes zoom {
@@ -39,6 +39,6 @@
 
 .image-button {
   cursor: pointer; /* Cambia el cursor al pasar el ratón */
-  width: 250px; /* Ajusta el tamaño */
-  height: 250px; /* Ajusta el tamaño */
+  width: 300px; /* Ajusta el tamaño */
+  height: 300px; /* Ajusta el tamaño */
 }
