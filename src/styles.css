@@ -7,6 +7,10 @@ body {
     height: 100%;
     font-family: Roboto, 'Helvetica Neue', sans-serif;
     background-color: rgb(81, 102, 126);
+    background-image: url('assets/fondo/fondoWeb.jpg');
+    background-size: cover; /* Para cubrir toda la pantalla */
+    background-repeat: no-repeat; /* Para que no se repita */
+    background-position: center; /* Para centrar la imagen */
   }
 
 
