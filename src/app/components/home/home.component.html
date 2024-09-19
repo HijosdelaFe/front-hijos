@@ -2,15 +2,19 @@
 <div class="container">
     <div class="zoom-container">
         <img
-          src="assets/hijosDeLaFe/HijosdelaFeLogo-Blanco.png" 
+          src="assets/hijosDeLaFe/LogoHDLF24.png" 
           alt="Zoom Image"
           class="zoom-image"
-          width="600px"
+          width="380px"
         />
       </div>
-      <div class="button-container" style="text-align: center; margin-top: 20px;">
+      <!-- <div class="button-container" style="text-align: center; margin-top: 20px;"> -->
+        <div  style="text-align: center;">
         <!-- <a href="/formulario-venta" class="btn btn-primary">Comprar Entradas</a> -->
-        <button mat-raised-button class="custom-button">Entradas Hijos de la Fe 2024!</button>
+        <!-- TicketHDLF.png -->
+        <!-- <button mat-raised-button class="custom-button">Entradas Hijos de la Fe 2024!</button> -->
+        <!-- <span>Entradas Hijos de la Fe 2024!</span> -->
+        <img src="assets/compra_entradas/TicketHDLF.png" alt="Botón" class="image-button" (click)="compraEntradas()" />
     </div>
 </div>
 <router-outlet></router-outlet>
