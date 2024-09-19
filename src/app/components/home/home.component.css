@@ -36,3 +36,9 @@
   background-color: #054284 !important; /* Color al pasar el mouse */
   color: #FFFFFF !important;
 }
+
+.image-button {
+  cursor: pointer; /* Cambia el cursor al pasar el ratón */
+  width: 250px; /* Ajusta el tamaño */
+  height: 250px; /* Ajusta el tamaño */
+}
