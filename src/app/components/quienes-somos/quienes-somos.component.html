@@ -1,0 +1,30 @@
+<app-navbar></app-navbar>
+
+<div class="quienes-somos-container">
+    <div class="sidebar">
+      <button mat-flat-button color="primary" [ngClass]="{'selected-button': selectedInfo === 'info1'}" (click)="mostrarInfo('info1')">¿Quienes somos?</button>
+      <button mat-flat-button color="primary" [ngClass]="{'selected-button': selectedInfo === 'info2'}" (click)="mostrarInfo('info2')">¿Que hacemos?</button>
+      <button mat-raised-button color="primary" [ngClass]="{'selected-button': selectedInfo === 'info3'}" (click)="mostrarInfo('info3')">¿Porqué lo hacemos?</button>
+      <button mat-raised-button color="primary" [ngClass]="{'selected-button': selectedInfo === 'info4'}" (click)="mostrarInfo('info4')">Nuestros Objetivos</button>
+      <button mat-raised-button color="primary" [ngClass]="{'selected-button': selectedInfo === 'info5'}" (click)="mostrarInfo('info5')">Nuestros valores</button>
+      <button mat-raised-button color="primary" [ngClass]="{'selected-button': selectedInfo === 'info6'}" (click)="mostrarInfo('info6')">Artistas Hijos de la Fé</button>
+
+      <!-- Botón para descargar el PDF -->
+    <a href="assets/quienes_somos/archivo/hijosdelafe_quienesSomos.pdf" download>
+      <button mat-raised-button class="descarga" color="accent">Descargar PDF</button>
+    </a>
+    </div>
+    <div class="info-display">      
+      <mat-card class="custom-card" style="width: 1000px">
+        <mat-card-content *ngIf="selectedInfo" [innerHTML]="formattedObjetivos">{{contenidoInfo}}</mat-card-content>
+        <mat-card-content *ngIf="selectedInfo == 'info6'">
+          <div class="artistas-list">
+            <div *ngFor="let artista of artistasList" class="artista-item">
+                - {{ artista }}
+            </div>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+  
