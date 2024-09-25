@@ -5,7 +5,7 @@
   
 
     .sidebar {
-        width: 200px;
+        width: 250px;
         background-color: #99a2d3;
         padding: 20px;
         height: 100%;
@@ -15,8 +15,8 @@
       }
       
       .sidebar button {        
-        margin-bottom: -50px; 
-        margin-top: 100px; 
+        margin-bottom: -33px; 
+        margin-top: 50px; 
         transition: background-color 0.3s ease, color 0.3s ease;
         width: 100%; /* Asegura que todos los botones ocupen el mismo ancho */
       }
@@ -41,10 +41,15 @@
 }
 
 .custom-card{
-  background-color:rgba(218, 225, 95, 0.5);
+  /* background-color:rgba(218, 225, 95, 0.5); */
+  background: none; /* Quita el fondo */
+  border: none; /* Quita el borde */
+  box-shadow: none; /* Quita cualquier sombra que pueda parecer un borde */
+  /* background: none; */
+  /* border: none; */
   color: white;
   font-size:25px;
-  line-height: 1.5
+  line-height: 0;
 } 
 
 .artistas-list {
@@ -66,4 +71,16 @@
   border: 2px solid #fff; /* Bordes adicionales si lo deseas */
   /* Otros estilos opcionales */
   font-weight: bold; /* Cambiar el peso de la fuente */
+}
+
+
+.image-container {
+  text-align: center; /* Centra la imagen */
+  /* margin-bottom: 10px; */
+}
+
+.card-image {
+  max-width: 100%; /* Asegura que la imagen no desborde el contenedor */
+  height: auto; /* Mantiene la proporción de la imagen */
+  width: 600px;
 }
