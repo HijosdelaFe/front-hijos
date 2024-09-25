@@ -1,0 +1,21 @@
+mat-toolbar {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los botones se muevan a una nueva línea si es necesario */
+    justify-content: space-between; /* Distribuye el espacio entre elementos */
+}
+
+mat-toolbar img {
+    width: 50px; /* Tamaño más pequeño para dispositivos móviles */
+}
+
+@media (max-width: 400px) {
+    mat-toolbar {
+        flex-direction: column; /* Coloca los elementos en columna */
+        align-items: center; /* Centra los elementos */
+    }
+    
+    mat-toolbar button {
+        width: 50%; /* Botones ocupan el ancho completo */
+        margin: 5px 0; /* Espacio entre botones */
+    }
+}
