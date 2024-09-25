@@ -6,39 +6,44 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    /* margin-top: 20px; */
-    /* padding-top: 20px; */
+  
   } 
 
 .zoom-image {
-  animation: zoom 1s infinite alternate; /* Cambia la duración y el tipo de animación según prefieras */
+  animation: zoom 1s infinite alternate;
   margin-top: 50px;
   padding-bottom: 30px;
 }
 
 @keyframes zoom {
     0% {
-        transform: scale(1); /* Tamaño original */
+        transform: scale(1);
     }
     100% {
-        transform: scale(1.2); /* Tamaño aumentado */
+        transform: scale(1.2); 
     }
 }
 
 
 .custom-button {
-  background-color: #69b1db !important; /* Cambia esto al color de fondo que desees */
-  color: #000000 !important; /* Cambia esto al color del texto que desees */
+  background-color: #69b1db !important;
+  color: #000000 !important; 
 }
 
-/* Cambiar el color al pasar el mouse (opcional) */
+
 .custom-button:hover {
-  background-color: #054284 !important; /* Color al pasar el mouse */
+  background-color: #054284 !important; 
   color: #FFFFFF !important;
 }
 
 .image-button {
-  cursor: pointer; /* Cambia el cursor al pasar el ratón */
-  width: 250px; /* Ajusta el tamaño */
-  height: 250px; /* Ajusta el tamaño */
+  transition: transform 0.3s ease;
+  cursor: pointer; 
+  width: 250px;
+  height: 250px; 
 }
+
+.image-button:hover {
+  transform: scale(1.15); 
+}
+
