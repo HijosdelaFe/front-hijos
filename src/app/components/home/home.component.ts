@@ -7,6 +7,6 @@ import { Component } from '@angular/core';
 })
 export class HomeComponent {
   compraEntradas() {
-    window.location.href = 'https://ventas.autoentrada.com/events/hijos-de-la-fe';
+    window.location.href = 'https://mariastudios.org/producto/hijos-de-la-fe-2025/';
   }
 }
