@@ -1,18 +1,19 @@
 .zoom-container {
-    overflow: hidden;
-    position: relative;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  
-  } 
+   overflow: hidden;
+   position: relative;
+   width: 100%;
+   height: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+ }
 
 .zoom-image {
   animation: zoom 1s infinite alternate;
   margin-top: 50px;
   padding-bottom: 30px;
+  max-width: 100%;
+  height: auto; 
 }
 
 @keyframes zoom {
@@ -20,30 +21,53 @@
         transform: scale(1);
     }
     100% {
-        transform: scale(1.2); 
+        transform: scale(1.2);
     }
 }
 
-
 .custom-button {
   background-color: #69b1db !important;
-  color: #000000 !important; 
+  color: #000000 !important;
 }
 
-
 .custom-button:hover {
-  background-color: #054284 !important; 
+  background-color: #054284 !important;
   color: #FFFFFF !important;
 }
 
 .image-button {
   transition: transform 0.3s ease;
-  cursor: pointer; 
+  cursor: pointer;
   width: 250px;
-  height: 250px; 
+  height: 250px;
+  max-width: 80%; 
+  height: auto;
 }
 
 .image-button:hover {
-  transform: scale(1.15); 
+  transform: scale(1.15);
 }
 
+@media (max-width: 768px) {
+  .zoom-image {
+    margin-top: 20px;
+    padding-bottom: 15px;
+  }
+
+  .image-button {
+    width: 180px; 
+    height: 180px;
+  }
+}
+
+@media (max-width: 480px) {
+  .zoom-image {
+    margin-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .image-button {
+    width: 150px; 
+    height: 150px;
+  }
+}

@@ -1,33 +1,42 @@
 mat-toolbar {
     display: flex;
-    flex-wrap: wrap; 
-    justify-content: space-between; 
+    flex-wrap: wrap;
+    justify-content: space-between;
     background-color: rgb(60, 126, 169) !important;
     color:white !important;
+    padding: 10px 15px; 
+    align-items: center; 
 }
 
 mat-toolbar img {
-    width: 50px; 
+    width: 50px;
+    height: auto; 
+    flex-shrink: 0; 
+}
+
+.example-spacer {
+    flex-grow: 1; 
 }
 
 .social-buttons-container {
   display: flex;
-  gap: 15px; 
+  gap: 15px;
   margin-top: 2px;
   justify-content: center; 
+  align-items: center;
 }
 
 .social-button {
-  display: flex; 
-  align-items: center; 
+  display: flex;
+  align-items: center;
   padding: 5px 12px;
-  border-radius: 8px; 
+  border-radius: 8px;
   font-family: Arial, sans-serif;
   font-size: 16px;
   font-weight: bold;
   color: white;
   text-decoration: none;
-  transition: background-color 0.3s ease; 
+  transition: background-color 0.3s ease;
   cursor: pointer;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
@@ -40,26 +49,81 @@ mat-toolbar img {
 }
 
 .instagram-button {
-  background-color: #E4405F; 
+  background-color: #E4405F;
 }
 .instagram-button:hover {
-  background-color: #D32E4A; 
+  background-color: #D32E4A;
 }
 
 .facebook-button {
-  background-color: #3B5998; 
+  background-color: #3B5998;
 }
 .facebook-button:hover {
-  background-color: #2D4373; 
+  background-color: #2D4373;
 }
-@media (max-width: 400px) {
+
+@media (max-width: 768px) {
     mat-toolbar {
         flex-direction: column; 
         align-items: center; 
+        padding: 10px;
+        height: auto; 
+        gap: 10px; 
+    }
+
+    mat-toolbar img {
+        margin-bottom: 5px; 
+        margin-right: 0; 
     }
     
     mat-toolbar button {
-        width: 50%; 
-        margin: 5px 0; 
+        width: 80%; 
+        margin: 5px 0;
+        text-align: center; 
+        height: 40px; 
+    }
+
+    .social-buttons-container {
+        flex-direction: column; 
+        width: 80%; 
+        gap: 8px; 
+        margin-top: 10px; 
+        align-items: stretch; 
+    }
+
+    .social-button {
+        justify-content: center; 
+        width: 100%; 
+        padding: 8px;
+    }
+    
+    .example-spacer {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    mat-toolbar img {
+        width: 40px; 
+    }
+
+    mat-toolbar button {
+        width: 90%; 
+        font-size: 0.9em; 
+    }
+
+    .social-buttons-container {
+        width: 90%;
+    }
+
+    .social-button {
+        font-size: 0.9em;
+        padding: 6px;
+    }
+
+    .social-button img {
+        width: 20px;
+        height: 20px;
+        margin-right: 5px;
     }
 }

@@ -1,6 +1,6 @@
 <app-navbar></app-navbar>
 
-<div class="quienes-somos-container">
+<div class="quienes-somos-container responsive-flex">
     <div class="sidebar">
       <button mat-flat-button color="primary" [ngClass]="{'selected-button': selectedInfo === 'info1'}" (click)="mostrarInfo('assets/quienes_somos/contenido/quienes_somos.png', 'info1')">¿Quienes somos?</button>
       <button mat-flat-button color="primary" [ngClass]="{'selected-button': selectedInfo === 'info2'}" (click)="mostrarInfo('assets/quienes_somos/contenido/que_hacemos.png', 'info2')">¿Que hacemos?</button>
@@ -17,7 +17,7 @@
     </a>
     </div>
     <div class="info-display">      
-      <mat-card class="custom-card" style="width: 1000px">
+      <mat-card class="custom-card">
         <mat-card-content>
           <div *ngIf="imagenActual" class="image-container">
             <img [src]="imagenActual" alt="Quienes Somos" class="card-image" />

@@ -1,86 +1,145 @@
- .quienes-somos-container {
+.quienes-somos-container {
     display: flex;
-    height: 100vh; 
-  }
-  
+    height: 100vh;
+}
 
-    .sidebar {
-        width: 250px;
-        background-color: #99a2d3;
-        padding: 20px;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start; 
-      }
-      
-      .sidebar button {        
-        margin-bottom: -33px; 
-        margin-top: 50px; 
-        transition: background-color 0.3s ease, color 0.3s ease;
-        width: 100%; /* Asegura que todos los botones ocupen el mismo ancho */
-      }
+.responsive-flex {
+    flex-direction: row; 
+}
 
-      .sidebar button:hover {
-        background-color: #1565c0; /* Cambia el color de fondo */
-        color: white; /* Cambia el color del texto */
-      }
+.sidebar {
+    width: 250px;
+    background-color: #99a2d3;
+    padding: 20px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-shrink: 0; 
+}
 
-      .sidebar .descarga:hover {
-        background-color: #cddbeb; /* Cambia el color de fondo */
-        color: rgb(161, 54, 54); /* Cambia el color del texto */
-      }
-  
+.sidebar button {
+    margin-bottom: -33px;
+    margin-top: 50px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    width: 100%;
+    text-align: left; 
+    padding: 10px 15px; 
+    white-space: normal; 
+    line-height: 1.2; 
+}
 
-  .info-display {
-    display: flex; /* Utiliza flexbox */
-    justify-content: center; /* Centra horizontalmente */
-    align-items: center; /* Centra verticalmente */
+.sidebar button:hover {
+    background-color: #1565c0;
+    color: white;
+}
+
+.sidebar .descarga:hover {
+    background-color: #cddbeb;
+    color: rgb(161, 54, 54);
+}
+
+.info-display {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 10px;
-    flex-grow: 1; /* Permite que ocupe el espacio restante */
+    flex-grow: 1;
+    overflow-y: auto;
 }
 
 .custom-card{
-  /* background-color:rgba(218, 225, 95, 0.5); */
-  background: none; /* Quita el fondo */
-  border: none; /* Quita el borde */
-  box-shadow: none; /* Quita cualquier sombra que pueda parecer un borde */
-  /* background: none; */
-  /* border: none; */
-  color: white;
-  font-size:25px;
-  line-height: 0;
-} 
+    background: none;
+    border: none;
+    box-shadow: none;
+    color: white;
+    font-size:25px;
+    line-height: 0;
+    width: 100%;
+}
 
 .artistas-list {
   display: flex;
-  flex-wrap: wrap; /* Permite que los elementos se envuelvan */
-  gap: 10px; /* Espaciado entre elementos */
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 .artista-item {
-  flex: 1 0 30%; /* Cada ítem ocupa al menos el 30% del ancho, ajustando según el espacio */
-  min-width: 150px; /* Ancho mínimo para los elementos */
-  box-sizing: border-box; /* Para incluir el padding y border en el ancho */
+  flex: 1 0 30%;
+  min-width: 150px;
+  box-sizing: border-box;
   font-size:18px;
 }
 
 .selected-button {
-  background-color: #1976d2; /* Cambia a un color que prefieras */
-  color: white; /* Color del texto */
-  border: 2px solid #fff; /* Bordes adicionales si lo deseas */
-  /* Otros estilos opcionales */
-  font-weight: bold; /* Cambiar el peso de la fuente */
+  background-color: #1976d2;
+  color: white;
+  border: 2px solid #fff;
+  font-weight: bold;
 }
 
-
 .image-container {
-  text-align: center; /* Centra la imagen */
-  /* margin-bottom: 10px; */
+  text-align: center;
+  margin-bottom: 10px;
 }
 
 .card-image {
-  max-width: 100%; /* Asegura que la imagen no desborde el contenedor */
-  height: auto; /* Mantiene la proporción de la imagen */
-  width: 600px;
+  max-width: 100%;
+  height: auto;
+  width: auto; 
+  max-height: 70vh; 
+  object-fit: contain; 
+}
+
+@media (max-width: 768px) {
+    .responsive-flex {
+        flex-direction: column; 
+        height: auto; 
+    }
+    .sidebar {
+        width: 100%; 
+        height: auto;
+        padding: 10px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+    }
+
+    .sidebar button {
+        width: 45%;
+        margin: 5px 0;
+        font-size: 0.9em;
+        padding: 8px 10px;
+        text-align: center;
+    }
+
+    .sidebar button.descarga {
+      width: 90%; 
+    }
+
+    .info-display {
+        padding: 15px;
+        height: auto; 
+    }
+
+    .custom-card {
+        font-size: 18px; 
+    }
+}
+
+@media (max-width: 480px) {
+    .sidebar button {
+        width: 90%; 
+        font-size: 0.8em;
+        margin: 3px 0;
+    }
+
+    .sidebar button.descarga {
+      width: 90%;
+    }
+
+    .custom-card {
+        font-size: 16px;
+    }
 }
