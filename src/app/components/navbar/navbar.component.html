@@ -1,16 +1,19 @@
-<mat-toolbar color="primary">
+<mat-toolbar>
     <img src="./assets/hijosDeLaFe/HijosdelaFeLogo-Blanco.png" width="80px" />
     <div class="example-spacer"></div>
-    <button *ngIf="isHome()" mat-button routerLink="/quienes-somos">¿Quiénes Somos?</button> <!-- Botón agregado -->
+    <button *ngIf="isHome()" mat-button routerLink="/quienes-somos">¿Quiénes Somos?</button> 
     <button *ngIf="isQuienesSomos()" mat-button routerLink="/">VOLVER</button>
     <div class="example-spacer"></div>
-    <a href="assets/concurso_teatro/archivo_concurso_teatro/Concurso Teatro.pdf" download>
-      <button *ngIf="isHome()" style="color: white" mat-button>Concurso Teatro</button> 
-    </a>
-    <div class="example-spacer"></div>
-    <!-- <button *ngIf="isHome()" mat-button routerLink="/quienes-somos">Concurso Dibujos</button> -->
-    <a href="assets/concurso_dibujos/archivo_concurso_dibujos/Concurso de Dibujo Virgen del Milagro.pdf" download>
-      <button *ngIf="isHome()" style="color: white" mat-button>Concurso Dibujos</button> 
-    </a>
+    <div *ngIf="isHome()" class="social-buttons-container">      
+      <a href="https://www.instagram.com/hijosdelafe/" target="_blank" class="social-button instagram-button">
+        <img  src="assets/iconos/instagram_sin_color.svg" alt="Instagram">
+        <span >Instagram</span>
+      </a>
+      <div class="example-spacer"></div>      
+      <a href="https://www.facebook.com/hijosdelafecordoba" target="_blank" class="social-button facebook-button">
+        <img src="assets/iconos/facebook.svg" alt="Facebook">
+        <span>Facebook</span>
+      </a>
+    </div>
   </mat-toolbar>
   
